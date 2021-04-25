@@ -1,0 +1,17 @@
+.model-box-wrap {
+  width: 660px;
+  height: 665px;
+  background: url(../../assets/images/model-bg.png) no-repeat center center;
+  background-size: 100% 100%;
+  position: relative;
+
+  .model-bottom {
+    width: 400px;
+    height: 300px;
+    background: url(../../assets/images/model-bottom-bg.png) no-repeat center center;
+    background-size: 100% 100%;
+    position: absolute;
+    bottom: -20px;
+    left: calc(50% - 200px);
+  }
+}

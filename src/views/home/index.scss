@@ -1,0 +1,14 @@
+.home-box {
+  width: 1920px;
+  height: 1080px;
+  overflow: hidden;
+  color: #fff;
+  background: #0c0d28;
+  position: absolute;
+
+  .home-content {
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 15px;
+  }
+}
