@@ -3,10 +3,13 @@ import './index.scss'
 import { Recharts, Components } from 'react-component-echarts'
 
 const {
+  TextStyle,
   AxisPointer,
   SplitLine,
   AxisLine,
   AxisTick,
+  AxisLabel,
+  Title,
   Tooltip,
   Grid,
   XAxis,
@@ -14,10 +17,13 @@ const {
   Series,
 } = Components
 
-const StripChartComponent = () => {
+const StripChartComponent = props => {
   return (
     <div className="strip-chart-box">
       <Recharts>
+        <Title text="诊断率" x="center">
+          <TextStyle color="#fff" fontSize={24} />
+        </Title>
         <Tooltip trigger="axis">
           <AxisPointer type="shadow" />
         </Tooltip>
@@ -26,19 +32,23 @@ const StripChartComponent = () => {
           <SplitLine show={false} />
           <AxisLine show={false} />
           <AxisTick show={false} />
+          <AxisLabel>
+            <TextStyle color="#fff" />
+          </AxisLabel>
         </XAxis>
-        <YAxis
-          type="category"
-          data={[...Array(14).keys()]}
-        >
+        <YAxis type="category" data={props.yAxisData}>
           <SplitLine show={false} />
           <AxisLine show={false} />
           <AxisTick show={false} />
+          <AxisLabel>
+            <TextStyle color="#fff" />
+          </AxisLabel>
         </YAxis>
         <Series
           name="2011年"
           type="bar"
-          data={[...Array(14).keys()]}
+          data={props.yAxisData}
+          itemStyle={{ normal: { color: 'rgb(73, 146, 255)' } }}
         />
       </Recharts>
     </div>

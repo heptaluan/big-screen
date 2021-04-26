@@ -11,5 +11,21 @@
     margin: 0 auto;
     background: url(../../assets/images/nav-bg.png) no-repeat center center;
     background-size: 100% 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    color: #fff;
+
+    li {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .list-context {
+      font-size: 24px;
+      margin-left: 15px;
+    }
   }
+
 }
