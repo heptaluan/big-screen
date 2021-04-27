@@ -16,11 +16,8 @@ export const option = {
     max: 450000,
     left: 20, // 图例距离左侧边框的距离
     bottom: 0, // 图例距离底部边框的距离
-    // calculable:true,
-    showLabel: !0,
     text: ['高', '低'], // 图例文本设置
     textStyle: {
-      // 图例文字的样式
       color: '#fff',
     },
     pieces: [
@@ -60,11 +57,6 @@ export const option = {
     // 地图组件配置
     map: 'china', // 选择地图
     roam: !1, // 可缩放和平移true（或！0），false（或！1）
-    scaleLimit: {
-      // 缩放比例
-      min: 1,
-      max: 2,
-    },
     zoom: 1.2, // 地图显示比例
     top: 50, // 地图距离上边框距离
     label: {
@@ -78,12 +70,6 @@ export const option = {
       },
     },
     itemStyle: {
-      // 鼠标选中图斑设置模块
-      normal: {
-        // shadowBlur: 50,
-        // shadowColor: 'rgba(0, 0, 0, 0.2)',
-        borderColor: 'rgba(0, 0, 0, 0.2)', // 边框样式
-      },
       emphasis: {
         //选中后
         areaColor: '#f2d5ad', // 鼠标移入颜色
