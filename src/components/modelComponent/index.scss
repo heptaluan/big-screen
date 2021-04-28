@@ -1,4 +1,10 @@
 .model-box-wrap {
   width: 660px;
   height: 665px;
+  background: url(../../assets/images/chart-group-bg.png) no-repeat center center;
+  background-size: contain;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
 }
