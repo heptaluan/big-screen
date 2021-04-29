@@ -21,13 +21,13 @@ const LineChartComponent = () => {
   return (
     <div className="line-chart-box">
       <Recharts>
-        <Title text="患者年龄分布" x="center">
+        <Title text="年龄分布" x="center">
           <TextStyle color="#fff" fontSize={24} />
         </Title>
         <Tooltip trigger="axis" />
         <Legend
           show={false}
-          data={['邮件营销', '联盟广告', '视频广告', '直接访问', '搜索引擎']}
+          data={['类型一', '类型二', '类型三', '类型四', '类型五']}
         />
         <Grid left="3%" right="4%" bottom="3%" containLabel={true} />
         <XAxis
@@ -51,7 +51,7 @@ const LineChartComponent = () => {
           </AxisLabel>
         </YAxis>
         <Series
-          name="邮件营销"
+          name="类型一"
           type="line"
           stack="总量"
           data={[120, 132, 101, 134, 90, 230, 210]}
@@ -63,7 +63,7 @@ const LineChartComponent = () => {
           }}
         />
         <Series
-          name="联盟广告"
+          name="类型二"
           type="line"
           stack="总量"
           data={[220, 182, 191, 234, 290, 330, 310]}
@@ -75,7 +75,7 @@ const LineChartComponent = () => {
           }}
         />
         <Series
-          name="视频广告"
+          name="类型三"
           type="line"
           stack="总量"
           data={[150, 232, 201, 154, 190, 330, 410]}
@@ -99,7 +99,19 @@ const LineChartComponent = () => {
           }}
         />
         <Series
-          name="搜索引擎"
+          name="类型四"
+          type="line"
+          stack="总量"
+          data={[820, 932, 901, 934, 1290, 1330, 1320]}
+          itemStyle={{
+            normal: {
+              color: 'rgb(88, 217, 249)',
+              lineStyle: { color: 'rgb(88, 217, 249)' },
+            },
+          }}
+        />
+        <Series
+          name="类型五"
           type="line"
           stack="总量"
           data={[820, 932, 901, 934, 1290, 1330, 1320]}

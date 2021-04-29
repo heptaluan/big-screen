@@ -20,7 +20,7 @@ const BarChartComponent = () => {
   return (
     <div className="bar-chart-box">
       <Recharts>
-        <Title text="患者年龄分布" x="center">
+        <Title text="年龄分布" x="center">
           <TextStyle color="#fff" fontSize={24} />
         </Title>
         <Tooltip trigger="axis">
