@@ -21,7 +21,7 @@ const StripChartComponent = props => {
   return (
     <div className="strip-chart-box">
       <Recharts>
-        <Title text="诊断率" x="center">
+        <Title text="地区癌肿高风险指数" x="center">
           <TextStyle color="#fff" fontSize={24} />
         </Title>
         <Tooltip trigger="axis">
@@ -45,9 +45,9 @@ const StripChartComponent = props => {
           </AxisLabel>
         </YAxis>
         <Series
-          name="2011年"
+          name="地区癌肿高风险指数"
           type="bar"
-          data={props.yAxisData}
+          data={props.seriesData}
           itemStyle={{ normal: { color: 'rgb(73, 146, 255)' } }}
         />
       </Recharts>

@@ -2,19 +2,21 @@ import React, { useRef, useEffect } from 'react'
 import './index.scss'
 
 import * as echarts from 'echarts'
-import * as jsonData from './data'
+import * as map from './map'
 import { option } from './options'
 
 const MapChartComponent = props => {
   const boxRef = useRef(null)
   useEffect(() => {
     const myChart = echarts.init(boxRef.current)
-    echarts.registerMap('china', jsonData.data)
+    echarts.registerMap('china', map.data)
     myChart.setOption(option)
     myChart.on('click', function (params) {
-      props.updateStripChart(params)
+      if (params.data) {
+        props.updateStripChart(params.data.list.list)
+      }
     })
-  // eslint-disable-next-line react-hooks/exhaustive-deps
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [])
 
   return <div ref={boxRef} className="map-chart-box"></div>

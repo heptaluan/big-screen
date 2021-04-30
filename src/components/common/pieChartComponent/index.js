@@ -61,11 +61,29 @@ const PieChartComponent = () => {
             config: { dimension: 'Year', value: 2011 },
           }}
         />
+        <Dataset
+          transform={{
+            type: 'filter',
+            config: { dimension: 'Year', value: 2012 },
+          }}
+        />
+        <Dataset
+          transform={{
+            type: 'filter',
+            config: { dimension: 'Year', value: 2013 },
+          }}
+        />
         <Series
           type="pie"
           radius={50}
           center={['50%', '25%']}
           datasetIndex={1}
+        />
+        <Series
+          type="pie"
+          radius={50}
+          center={['50%', '50%']}
+          datasetIndex={2}
         />
         <Series
           type="pie"

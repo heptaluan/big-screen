@@ -8,7 +8,7 @@ const NavComponent = () => {
       <ul className="nav-box">
         <li>
           <IconFont style={{ fontSize: '60px' }} type="icondingdan" />
-          <div className="list-context">总订单：1234</div>
+          <div className="list-context">总订单：546321</div>
         </li>
         <li>
           <IconFont style={{ fontSize: '60px' }} type="iconjiance" />

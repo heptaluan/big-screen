@@ -13,23 +13,20 @@ const {
   YAxis,
   Series,
   Tooltip,
-  AxisPointer
+  AxisPointer,
 } = Components
 
-const BarChartComponent = () => {
+const BarChartComponent = props => {
   return (
     <div className="bar-chart-box">
       <Recharts>
-        <Title text="年龄分布" x="center">
+        <Title text="年龄段分布" x="center">
           <TextStyle color="#fff" fontSize={24} />
         </Title>
         <Tooltip trigger="axis">
           <AxisPointer type="shadow" />
         </Tooltip>
-        <XAxis
-          type="category"
-          data={['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun']}
-        >
+        <XAxis type="category" data={props.data.name}>
           <SplitLine show={false} />
           <AxisLine show={false} />
           <AxisTick show={false} />
@@ -46,7 +43,8 @@ const BarChartComponent = () => {
           </AxisLabel>
         </YAxis>
         <Series
-          data={[120, 200, 150, 80, 70, 110, 130]}
+          name={'数量'}
+          data={props.data.value}
           type="bar"
           itemStyle={{ normal: { color: 'rgb(73, 146, 255)' } }}
         />
