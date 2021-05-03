@@ -1,6 +1,6 @@
 import * as _ from 'lodash'
 
-// 格式化柱状图数据
+// 格式化数据
 export const formatChartData = arr => {
   const unzipData = _.unzip(arr)
   return {

@@ -7,19 +7,11 @@ import ChartGroupComponent from '../../components/chartGroupComponent/index'
 import ModelComponent from '../../components/modelComponent/index'
 import ListGroupComponent from '../../components/listGroupComponent/index'
 
-import useWindowSize from '../../hook/useWindowSize'
-
 const Home = () => {
-  const { scale, origin, top, left } = useWindowSize()
+
   return (
     <div
       className="home-box"
-      style={{
-        transform: scale,
-        transformOrigin: origin,
-        top: top,
-        left: left,
-      }}
     >
       <TopHeaderComponent />
       <NavComponent />
