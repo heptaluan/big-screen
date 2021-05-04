@@ -16,7 +16,6 @@ const MapChartComponent = props => {
         props.updateStripChart(params.data.list.list)
       }
     })
-    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [])
 
   return <div ref={boxRef} className="map-chart-box"></div>
