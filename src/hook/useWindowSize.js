@@ -6,30 +6,30 @@ export default function useWindowSize() {
       origin = `0 0`,
       top = null,
       left = null,
-      leftCenter = `-${Math.abs((1920 - size.width) / 2)}px`,
-      topCenter = `-${Math.abs((1080 - size.height) / 2)}px`,
+      leftCenter = Math.abs((1920 - size.width) / 2),
+      topCenter = Math.abs((1080 - size.height) / 2),
       wScale = size.width / 1920,
       hScale = size.height / 1080
     if (size.width >= 1680 && size.height >= 945) {
       scale = hScale
       origin = `center 0`
-      top = `0px`
-      left = leftCenter
+      top = `0`
+      left = hScale > 0.875 ? `${leftCenter}px` : `-${leftCenter}px`
     } else if (size.width >= 1680 && size.height < 945) {
       scale = hScale
       origin = `center 0`
-      top = `0px`
-      left = leftCenter
+      top = `0`
+      left = hScale > 0.875 ? `${leftCenter}px` : `-${leftCenter}px`
     } else if (size.width < 1680 && size.height >= 945) {
       scale = wScale
       origin = `0 center`
-      top = topCenter
-      left = `0px`
+      top = wScale > 0.875 ? `${topCenter}px` : `-${topCenter}px`
+      left = `0`
     } else if (size.width < 1680 && size.height < 945) {
       scale = wScale
       origin = `0 center`
-      top = topCenter
-      left = `0px`
+      top = wScale > 0.875 ? `${topCenter}px` : `-${topCenter}px`
+      left = `0`
     }
     return {
       scale: `scale(${scale})`,
