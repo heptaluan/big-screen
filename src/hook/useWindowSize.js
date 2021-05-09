@@ -34,8 +34,6 @@ export default function useWindowSize() {
     return {
       scale: `scale(${scale})`,
       origin: origin,
-      top: top,
-      left: left,
     }
   }
 

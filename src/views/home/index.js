@@ -23,11 +23,6 @@ const Home = () => {
     >
       <TopHeaderComponent />
       <NavComponent />
-      <div className="home-content">
-        <ListGroupComponent />
-        <ModelComponent />
-        <ChartGroupComponent />
-      </div>
     </div>
   )
 }
