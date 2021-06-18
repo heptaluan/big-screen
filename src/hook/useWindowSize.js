@@ -2,7 +2,7 @@ import { useEffect, useState, useCallback } from 'react'
 
 export default function useWindowSize() {
   const computedStyle = size => {
-    let scale = 1,
+    let scale = 0.875,
       origin = `0 0`,
       top = null,
       left = null,
@@ -14,26 +14,28 @@ export default function useWindowSize() {
       scale = hScale
       origin = `center 0`
       top = `0`
-      left = hScale > 1 ? `${leftCenter}px` : `-${leftCenter}px`
+      left = hScale > 0.875 ? `${leftCenter}px` : `-${leftCenter}px`
     } else if (size.width >= 1680 && size.height < 945) {
       scale = hScale
       origin = `center 0`
       top = `0`
-      left = hScale > 1 ? `${leftCenter}px` : `-${leftCenter}px`
+      left = hScale > 0.875 ? `${leftCenter}px` : `-${leftCenter}px`
     } else if (size.width < 1680 && size.height >= 945) {
       scale = wScale
       origin = `0 center`
-      top = wScale > 1 ? `${topCenter}px` : `-${topCenter}px`
+      top = wScale > 0.875 ? `${topCenter}px` : `-${topCenter}px`
       left = `0`
     } else if (size.width < 1680 && size.height < 945) {
       scale = wScale
       origin = `0 center`
-      top = wScale > 1 ? `${topCenter}px` : `-${topCenter}px`
+      top = wScale > 0.875 ? `${topCenter}px` : `-${topCenter}px`
       left = `0`
     }
     return {
       scale: `scale(${scale})`,
       origin: origin,
+      top: top,
+      left: left,
     }
   }
 

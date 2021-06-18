@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import './index.scss'
 import StripChartComponent from '../common/stripChartComponent/idnex'
 import MapChartComponent from '../common/mapChartComponent/index'
+import AcrossLineChartComponent from '../common/acrossLineChartComponent/index'
 
 const ChartGroupComponent = () => {
   const [data, setData] = useState({
@@ -33,11 +34,12 @@ const ChartGroupComponent = () => {
 
   return (
     <div className="chart-group-box">
-      <MapChartComponent updateStripChart={updateStripChart} />
+      {/* <MapChartComponent updateStripChart={updateStripChart} />
       <StripChartComponent
         yAxisData={data.yAxisData}
         seriesData={data.seriesData}
       />
+      <AcrossLineChartComponent /> */}
     </div>
   )
 }

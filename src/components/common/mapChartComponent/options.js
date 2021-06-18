@@ -203,6 +203,15 @@ export const option = {
         show: false,
       },
     },
+    itemStyle: {
+      normal: {
+        areaColor: 'rgb(73, 146, 255)',
+        borderColor: 'rgb(9, 54, 95)',
+      },
+      emphasis: {
+        areaColor: '#4042ff',
+      },
+    },
   },
   series: [
     {
@@ -210,12 +219,27 @@ export const option = {
       type: 'scatter',
       coordinateSystem: 'geo',
       data: convertData(list),
+      symbolSize: 12,
+      label: {
+        normal: {
+          show: false,
+        },
+        emphasis: {
+          show: false,
+        },
+      },
+      itemStyle: {
+        emphasis: {
+          borderColor: '#fff',
+          borderWidth: 1,
+        },
+      },
     },
     {
       type: 'map',
       map: 'china',
       geoIndex: 0,
-      aspectScale: 0.8,
+      aspectScale: 0.75,
       tooltip: {
         show: false,
       },
