@@ -34,12 +34,12 @@ const ChartGroupComponent = () => {
 
   return (
     <div className="chart-group-box">
-      {/* <MapChartComponent updateStripChart={updateStripChart} />
+      <MapChartComponent updateStripChart={updateStripChart} />
       <StripChartComponent
         yAxisData={data.yAxisData}
         seriesData={data.seriesData}
       />
-      <AcrossLineChartComponent /> */}
+      <AcrossLineChartComponent />
     </div>
   )
 }

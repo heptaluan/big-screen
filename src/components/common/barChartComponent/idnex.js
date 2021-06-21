@@ -2,23 +2,60 @@ import React from 'react'
 import './index.scss'
 import { Recharts, Components } from 'react-component-echarts'
 
-const { AxisPointer, Tooltip, Legend, Grid, XAxis, YAxis, Series } = Components
+const {
+  TextStyle,
+  AxisPointer,
+  LineStyle,
+  SplitLine,
+  AxisLine,
+  Title,
+  Tooltip,
+  Grid,
+  XAxis,
+  YAxis,
+  Series,
+} = Components
 
-const BarChartComponent = props => {
+const BarChartComponent = () => {
   return (
-    <div className="bar-chart-box">
+    <div className="pie-chart-box">
       <Recharts>
+        <Title text="年龄段分部">
+          <TextStyle color="#fff" />
+        </Title>
         <Tooltip trigger="axis">
           <AxisPointer type="shadow" />
         </Tooltip>
-        {/* <Legend data={["直接访问","邮件营销","联盟广告","视频广告","搜索引擎","百度","谷歌","必应","其他"]} /> */}
         <Grid left="3%" right="4%" bottom="3%" containLabel={true} />
-        <XAxis type="category" data={["周一","周二","周三","周四","周五","周六","周日"]} />
-        <YAxis type="value" />
-        <Series name="直接访问" type="bar" stack="广告" data={[320,332,301,334,390,330,320]} />
-        <Series name="邮件营销" type="bar" stack="广告" data={[120,132,101,134,90,230,210]} />
-        <Series name="联盟广告" type="bar" stack="广告" data={[220,182,191,234,290,330,310]} />
-        <Series name="视频广告" type="bar" stack="广告" data={[150,232,201,154,190,330,410]} />
+        <XAxis
+          type="category"
+          data={['20以下', '20-35', '35-50', '50-70', '70以上']}
+        >
+          <SplitLine show={false} />
+          <AxisLine>
+            <LineStyle color="#fff" />
+          </AxisLine>
+        </XAxis>
+        <YAxis type="value">
+          <SplitLine show={false} />
+          <AxisLine>
+            <LineStyle color="#fff" />
+          </AxisLine>
+        </YAxis>
+        <Series
+          color={['#4ed4f8']}
+          name="男"
+          type="bar"
+          stack="年龄段分部"
+          data={[320, 332, 301, 334, 390]}
+        />
+        <Series
+          color={['#fdd856']}
+          name="女"
+          type="bar"
+          stack="年龄段分部"
+          data={[120, 132, 101, 134, 90]}
+        />
       </Recharts>
     </div>
   )

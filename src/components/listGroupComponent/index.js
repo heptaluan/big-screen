@@ -8,8 +8,8 @@ const ListGroupComponent = () => {
   return (
     <div className="list-group-box">
       <PieChartComponent />
-      {/* <BarChartComponent />
-      <LineChartComponent /> */}
+      <BarChartComponent />
+      <LineChartComponent />
     </div>
   )
 }
