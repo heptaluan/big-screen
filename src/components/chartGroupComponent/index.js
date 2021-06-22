@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import './index.scss'
 import StripChartComponent from '../common/stripChartComponent/idnex'
 import MapChartComponent from '../common/mapChartComponent/index'
-import AcrossLineChartComponent from '../common/acrossLineChartComponent/index'
+import LineChartComponent from '../common/lineChartComponent/index'
 
 const ChartGroupComponent = () => {
   const [data, setData] = useState({
@@ -39,7 +39,7 @@ const ChartGroupComponent = () => {
         yAxisData={data.yAxisData}
         seriesData={data.seriesData}
       />
-      <AcrossLineChartComponent />
+      <LineChartComponent />
     </div>
   )
 }
