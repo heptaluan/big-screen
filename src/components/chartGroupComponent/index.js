@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import './index.scss'
 import StripChartComponent from '../common/stripChartComponent/idnex'
 import MapChartComponent from '../common/mapChartComponent/index'
-import StackedAreaChart from '../common/stackedAreaChart/index'
+import StackedAreaChartComponent from '../common/stackedAreaChartComponent/index'
 
 const ChartGroupComponent = () => {
   const [data, setData] = useState({
@@ -39,7 +39,7 @@ const ChartGroupComponent = () => {
         yAxisData={data.yAxisData}
         seriesData={data.seriesData}
       />
-      <StackedAreaChart />
+      <StackedAreaChartComponent />
     </div>
   )
 }

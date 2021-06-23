@@ -2,60 +2,23 @@ import React from 'react'
 import './index.scss'
 import { Recharts, Components } from 'react-component-echarts'
 
-const {
-  TextStyle,
-  AxisPointer,
-  LineStyle,
-  SplitLine,
-  AxisLine,
-  Title,
-  Tooltip,
-  Grid,
-  XAxis,
-  YAxis,
-  Series,
-} = Components
+const { TextStyle, AxisPointer, AxisLabel, Title, Tooltip, XAxis, YAxis, Series } = Components
 
 const BarChartComponent = () => {
   return (
-    <div className="pie-chart-box">
+    <div className="bar-chart-box">
       <Recharts>
-        <Title text="年龄段分部">
+        <Title text="癌肿风险占比">
           <TextStyle color="#fff" />
         </Title>
         <Tooltip trigger="axis">
           <AxisPointer type="shadow" />
         </Tooltip>
-        <Grid left="3%" right="4%" bottom="3%" containLabel={true} />
-        <XAxis
-          type="category"
-          data={['20以下', '20-35', '35-50', '50-70', '70以上']}
-        >
-          <SplitLine show={false} />
-          <AxisLine>
-            <LineStyle color="#fff" />
-          </AxisLine>
+        <XAxis type="category" data={["胃癌","乳腺癌","肝癌","肺癌","肠癌","食管癌","胰腺癌","血液肿瘤","脑瘤","前列腺癌","卵巢癌","甲状腺癌","鼻咽癌","嗜铬细胞瘤"]}>
+          <AxisLabel interval={0} rotate={40} />
         </XAxis>
-        <YAxis type="value">
-          <SplitLine show={false} />
-          <AxisLine>
-            <LineStyle color="#fff" />
-          </AxisLine>
-        </YAxis>
-        <Series
-          color={['#4ed4f8']}
-          name="男"
-          type="bar"
-          stack="年龄段分部"
-          data={[320, 332, 301, 334, 390]}
-        />
-        <Series
-          color={['#fdd856']}
-          name="女"
-          type="bar"
-          stack="年龄段分部"
-          data={[120, 132, 101, 134, 90]}
-        />
+        <YAxis type="value" />
+        <Series name="癌肿风险占比" data={[120,200,150,80,70,110,130,120,200,150,80,70,110,130]} type="bar" itemStyle={{"emphasis":{"barBorderRadius":10},"normal":{"barBorderRadius":10}}} />
       </Recharts>
     </div>
   )

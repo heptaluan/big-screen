@@ -31,7 +31,9 @@ const LineChartComponent = () => {
             <Label backgroundColor="#6a7985" />{' '}
           </AxisPointer>
         </Tooltip>
-        <Legend data={['每月检测量', '累计检测量']} />
+        <Legend data={['每月检测量', '累计检测量']}>
+          <TextStyle color="#fff" />
+        </Legend>
         <Grid left="3%" right="4%" bottom="3%" containLabel={true} />
         <XAxis
           type="category"

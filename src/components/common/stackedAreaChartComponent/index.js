@@ -39,7 +39,9 @@ const LineChartComponent = () => {
         <Tooltip trigger="axis">
           <AxisPointer type="cross"> <Label backgroundColor="#6a7985" /> </AxisPointer>
         </Tooltip>
-        <Legend data={["Line 1","Line 2","Line 3"]} />
+        <Legend data={["Line 1","Line 2","Line 3"]}>
+          <TextStyle color="#fff" />
+        </Legend>
         <Toolbox>
           <Feature>
             <SaveAsImage />
