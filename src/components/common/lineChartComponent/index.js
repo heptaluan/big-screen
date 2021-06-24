@@ -18,11 +18,11 @@ const {
   Series,
 } = Components
 
-const LineChartComponent = () => {
+const LineChartComponent = props => {
   return (
     <div className="line-chart-box">
-      <Recharts>
-        <Title text="检测量">
+      <Recharts color={props.data.color}>
+        <Title text={props.data.lineChartData.title}>
           <TextStyle color="#fff" />
         </Title>
         <Tooltip trigger="axis">
@@ -38,20 +38,7 @@ const LineChartComponent = () => {
         <XAxis
           type="category"
           boundaryGap={false}
-          data={[
-            '一月',
-            '二月',
-            '三月',
-            '四月',
-            '五月',
-            '六月',
-            '七月',
-            '八月',
-            '九月',
-            '十月',
-            '十一月',
-            '十二月',
-          ]}
+          data={props.data.lineChartData.xAxisData}
         >
           <SplitLine show={false} />
           <AxisLine>
@@ -65,31 +52,16 @@ const LineChartComponent = () => {
           </AxisLine>
         </YAxis>
         <Series
-          color={['#4ed4f8']}
           name="每月检测量"
           type="line"
           stack="总量"
-          data={[320, 332, 301, 334, 390, 330, 320, 270, 220, 230, 290, 350]}
+          data={props.data.lineChartData.monthTestNum}
         />
         <Series
-          color={['#fdd856']}
           name="累计检测量"
           type="line"
           stack="总量"
-          data={[
-            820,
-            932,
-            901,
-            934,
-            1290,
-            1330,
-            1320,
-            1280,
-            1260,
-            1280,
-            1350,
-            1370,
-          ]}
+          data={props.data.lineChartData.allTestNum}
         >
           {' '}
           <Label normal={{ show: true, position: 'top' }} />{' '}

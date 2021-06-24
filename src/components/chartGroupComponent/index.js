@@ -4,7 +4,7 @@ import StripChartComponent from '../common/stripChartComponent/idnex'
 import MapChartComponent from '../common/mapChartComponent/index'
 import StackedAreaChartComponent from '../common/stackedAreaChartComponent/index'
 
-const ChartGroupComponent = () => {
+const ChartGroupComponent = props => {
   const [data, setData] = useState({
     yAxisData: [
       '胃癌',
@@ -39,7 +39,7 @@ const ChartGroupComponent = () => {
         yAxisData={data.yAxisData}
         seriesData={data.seriesData}
       />
-      <StackedAreaChartComponent />
+      <StackedAreaChartComponent data={props.data} />
     </div>
   )
 }

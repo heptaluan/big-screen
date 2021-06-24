@@ -16,11 +16,11 @@ const {
   Series,
 } = Components
 
-const StackedBarChartComponent = () => {
+const StackedBarChartComponent = props => {
   return (
     <div className="pie-chart-box">
-      <Recharts>
-        <Title text="年龄段分部">
+      <Recharts color={props.data.color}>
+        <Title text={props.data.stackedBarChartData.title}>
           <TextStyle color="#fff" />
         </Title>
         <Tooltip trigger="axis">
@@ -29,7 +29,7 @@ const StackedBarChartComponent = () => {
         <Grid left="3%" right="4%" bottom="3%" containLabel={true} />
         <XAxis
           type="category"
-          data={['20以下', '20-35', '35-50', '50-70', '70以上']}
+          data={props.data.stackedBarChartData.xAxisData}
         >
           <SplitLine show={false} />
           <AxisLine>
@@ -43,18 +43,16 @@ const StackedBarChartComponent = () => {
           </AxisLine>
         </YAxis>
         <Series
-          color={['#4ed4f8']}
           name="男"
           type="bar"
           stack="年龄段分部"
-          data={[320, 332, 301, 334, 390]}
+          data={props.data.stackedBarChartData.manData}
         />
         <Series
-          color={['#fdd856']}
           name="女"
           type="bar"
           stack="年龄段分部"
-          data={[120, 132, 101, 134, 90]}
+          data={props.data.stackedBarChartData.womanData}
         />
       </Recharts>
     </div>

@@ -4,12 +4,12 @@ import LineChartComponent from '../common/lineChartComponent/index'
 import StackedBarChartComponent from '../common/stackedBarChartComponent/idnex'
 import PieChartComponent from '../common/pieChartComponent/index'
 
-const ListGroupComponent = () => {
+const ListGroupComponent = props => {
   return (
     <div className="list-group-box">
-      <PieChartComponent />
-      <StackedBarChartComponent />
-      <LineChartComponent />
+      <PieChartComponent data={props.data} />
+      <StackedBarChartComponent data={props.data} />
+      <LineChartComponent data={props.data} />
     </div>
   )
 }
