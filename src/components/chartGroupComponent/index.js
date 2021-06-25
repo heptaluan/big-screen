@@ -35,10 +35,7 @@ const ChartGroupComponent = props => {
   return (
     <div className="chart-group-box">
       <MapChartComponent updateStripChart={updateStripChart} />
-      <StripChartComponent
-        yAxisData={data.yAxisData}
-        seriesData={data.seriesData}
-      />
+      <StripChartComponent yAxisData={data.yAxisData} seriesData={data.seriesData} />
       <StackedAreaChartComponent data={props.data} />
     </div>
   )

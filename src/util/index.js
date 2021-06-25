@@ -16,11 +16,7 @@ export const formatChartData = arr => {
 export const getTotal = (arr, list, index) => {
   let totalArr = []
   list.forEach(type => {
-    totalArr.push(
-      _.unzip(arr.filter(item => item[index] === type))[6].reduce(
-        (prev, cur) => (prev += cur)
-      )
-    )
+    totalArr.push(_.unzip(arr.filter(item => item[index] === type))[6].reduce((prev, cur) => (prev += cur)))
   })
   return {
     name: list,

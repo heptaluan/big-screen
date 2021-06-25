@@ -27,7 +27,12 @@ const BarChartComponent = props => {
             <LineStyle color="#fff" />
           </AxisLine>
         </YAxis>
-        <Series name="癌肿风险占比" data={props.data.barChartData.seriesData} type="bar" itemStyle={{"emphasis":{"barBorderRadius":10},"normal":{"barBorderRadius":10}}} />
+        <Series
+          name="癌肿风险占比"
+          data={props.data.barChartData.seriesData}
+          type="bar"
+          itemStyle={{ emphasis: { barBorderRadius: 10 }, normal: { barBorderRadius: 10 } }}
+        />
       </Recharts>
     </div>
   )

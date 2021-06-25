@@ -2,20 +2,7 @@ import React from 'react'
 import './index.scss'
 import { Recharts, Components } from 'react-component-echarts'
 
-const {
-  TextStyle,
-  AxisPointer,
-  SplitLine,
-  AxisLine,
-  AxisTick,
-  AxisLabel,
-  Title,
-  Tooltip,
-  Grid,
-  XAxis,
-  YAxis,
-  Series,
-} = Components
+const { TextStyle, AxisPointer, SplitLine, AxisLine, AxisTick, AxisLabel, Title, Tooltip, Grid, XAxis, YAxis, Series } = Components
 
 const StripChartComponent = props => {
   return (
@@ -44,12 +31,7 @@ const StripChartComponent = props => {
             <TextStyle color="#fff" />
           </AxisLabel>
         </YAxis>
-        <Series
-          name="地区癌肿高风险指数"
-          type="bar"
-          data={props.seriesData}
-          itemStyle={{ normal: { color: 'rgb(73, 146, 255)' } }}
-        />
+        <Series name="地区癌肿高风险指数" type="bar" data={props.seriesData} itemStyle={{ normal: { color: 'rgb(73, 146, 255)' } }} />
       </Recharts>
     </div>
   )

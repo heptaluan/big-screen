@@ -2,21 +2,7 @@ import React from 'react'
 import './index.scss'
 import { Recharts, Components } from 'react-component-echarts'
 
-const {
-  TextStyle,
-  Label,
-  AxisPointer,
-  LineStyle,
-  SplitLine,
-  AxisLine,
-  Title,
-  Tooltip,
-  Legend,
-  Grid,
-  XAxis,
-  YAxis,
-  Series,
-} = Components
+const { TextStyle, Label, AxisPointer, LineStyle, SplitLine, AxisLine, Title, Tooltip, Legend, Grid, XAxis, YAxis, Series } = Components
 
 const LineChartComponent = props => {
   return (
@@ -35,11 +21,7 @@ const LineChartComponent = props => {
           <TextStyle color="#fff" />
         </Legend>
         <Grid left="3%" right="4%" bottom="3%" containLabel={true} />
-        <XAxis
-          type="category"
-          boundaryGap={false}
-          data={props.data.lineChartData.xAxisData}
-        >
+        <XAxis type="category" boundaryGap={false} data={props.data.lineChartData.xAxisData}>
           <SplitLine show={false} />
           <AxisLine>
             <LineStyle color="#fff" />
@@ -51,18 +33,8 @@ const LineChartComponent = props => {
             <LineStyle color="#fff" />
           </AxisLine>
         </YAxis>
-        <Series
-          name="每月检测量"
-          type="line"
-          stack="总量"
-          data={props.data.lineChartData.monthTestNum}
-        />
-        <Series
-          name="累计检测量"
-          type="line"
-          stack="总量"
-          data={props.data.lineChartData.allTestNum}
-        >
+        <Series name="每月检测量" type="line" stack="总量" data={props.data.lineChartData.monthTestNum} />
+        <Series name="累计检测量" type="line" stack="总量" data={props.data.lineChartData.allTestNum}>
           {' '}
           <Label normal={{ show: true, position: 'top' }} />{' '}
         </Series>
