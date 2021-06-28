@@ -3,7 +3,7 @@ import './index.scss'
 
 import * as echarts from 'echarts'
 import * as map from './map'
-import { option } from './options'
+import { option } from '../../../assets/js/mapConfig'
 
 const MapChartComponent = props => {
   const boxRef = useRef(null)

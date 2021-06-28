@@ -1,5 +1,5 @@
 export const allData = {
-  color: ['#80FFA5', '#00DDFF', '#37A2FF', '#FF0087', '#FFBF00'],
+  color: ['#00DDFF', '#80FFA5', '#00DDFF', '#37A2FF', '#FF0087', '#FFBF00'],
   pieChartData: {
     title: '全部产品分布',
     data: [
@@ -42,24 +42,24 @@ export const allData = {
   },
   stackedAreaChartData: {
     title: '渠道商检测量',
-    legendData: ['Line 1', 'Line 2', 'Line 3'],
+    legendData: ['江苏海尔思', '河南中平韩一', '河南圣德医院'],
     xAxisData: ['一月', '二月', '三月', '四月', '五月', '六月', '七月', '八月', '九月', '十月', '十一月', '十二月'],
     seriesData: [
       {
         id: 1,
-        name: 'Line 1',
+        name: '江苏海尔思',
         color: ['rgba(128, 255, 165)', 'rgba(1, 191, 236)'],
         data: [140, 232, 101, 264, 90, 340, 250, 140, 232, 101, 264, 90, 340, 250],
       },
       {
         id: 2,
-        name: 'Line 2',
+        name: '河南中平韩一',
         color: ['rgba(0, 221, 255)', 'rgba(77, 119, 255)'],
         data: [120, 282, 111, 234, 220, 340, 310, 120, 282, 111, 234, 220, 140],
       },
       {
         id: 3,
-        name: 'Line 3',
+        name: '河南圣德医院',
         color: ['rgba(55, 162, 255)', 'rgba(116, 21, 219)'],
         data: [320, 132, 201, 334, 190, 130, 220, 320, 132, 201, 334, 190, 330],
       },
@@ -68,7 +68,7 @@ export const allData = {
 }
 
 export const monthData = {
-  color: ['#80FFA5', '#00DDFF', '#37A2FF', '#FF0087', '#FFBF00'],
+  color: ['#00DDFF', '#80FFA5', '#00DDFF', '#37A2FF', '#FF0087', '#FFBF00'],
   pieChartData: {
     title: '当月产品分布',
     data: [
@@ -111,24 +111,24 @@ export const monthData = {
   },
   stackedAreaChartData: {
     title: '渠道商检测量',
-    legendData: ['Line 1', 'Line 2', 'Line 3'],
+    legendData: ['江苏海尔思', '河南中平韩一', '河南圣德医院'],
     xAxisData: ['一月', '二月', '三月', '四月', '五月', '六月', '七月', '八月', '九月', '十月', '十一月', '十二月'],
     seriesData: [
       {
         id: 1,
-        name: 'Line 1',
+        name: '江苏海尔思',
         color: ['rgba(0, 221, 255)', 'rgba(77, 119, 255)'],
         data: [120, 282, 111, 234, 220, 340, 310, 120, 282, 111, 234, 220, 140],
       },
       {
         id: 2,
-        name: 'Line 2',
+        name: '河南中平韩一',
         color: ['rgba(55, 162, 255)', 'rgba(116, 21, 219)'],
         data: [140, 232, 101, 264, 90, 340, 250, 140, 232, 101, 264, 90, 340, 250],
       },
       {
         id: 3,
-        name: 'Line 3',
+        name: '河南圣德医院',
         color: ['rgba(128, 255, 165)', 'rgba(1, 191, 236)'],
         data: [320, 132, 201, 334, 190, 130, 220, 320, 132, 201, 334, 190, 330],
       },
@@ -137,7 +137,7 @@ export const monthData = {
 }
 
 export const lastMonthData = {
-  color: ['#80FFA5', '#00DDFF', '#37A2FF', '#FF0087', '#FFBF00'],
+  color: ['#00DDFF', '#80FFA5', '#00DDFF', '#37A2FF', '#FF0087', '#FFBF00'],
   pieChartData: {
     title: '上月产品分布',
     data: [
@@ -180,24 +180,24 @@ export const lastMonthData = {
   },
   stackedAreaChartData: {
     title: '渠道商检测量',
-    legendData: ['Line 1', 'Line 2', 'Line 3'],
+    legendData: ['江苏海尔思', '河南中平韩一', '河南圣德医院'],
     xAxisData: ['一月', '二月', '三月', '四月', '五月', '六月', '七月', '八月', '九月', '十月', '十一月', '十二月'],
     seriesData: [
       {
         id: 1,
-        name: 'Line 1',
+        name: '江苏海尔思',
         color: ['rgba(0, 221, 255)', 'rgba(77, 119, 255)'],
         data: [320, 132, 201, 334, 190, 130, 220, 320, 132, 201, 334, 190, 330],
       },
       {
         id: 2,
-        name: 'Line 2',
+        name: '河南中平韩一',
         color: ['rgba(128, 255, 165)', 'rgba(1, 191, 236)'],
         data: [120, 282, 111, 234, 220, 340, 310, 120, 282, 111, 234, 220, 140],
       },
       {
         id: 3,
-        name: 'Line 3',
+        name: '河南圣德医院',
         color: ['rgba(55, 162, 255)', 'rgba(116, 21, 219)'],
         data: [140, 232, 101, 264, 90, 340, 250, 140, 232, 101, 264, 90, 340, 250],
       },

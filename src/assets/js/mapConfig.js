@@ -205,11 +205,14 @@ export const option = {
     },
     itemStyle: {
       normal: {
-        areaColor: 'rgb(73, 146, 255)',
-        borderColor: 'rgb(9, 54, 95)',
+        areaColor: '#00DDFF',
+        borderWidth: 1,
+        borderColor: '#9ffcff',
+        shadowColor: 'rgba(0,54,255, 1)',
+        shadowBlur: 30,
       },
       emphasis: {
-        areaColor: '#4042ff',
+        areaColor: '#00DDFF',
       },
     },
   },
@@ -229,9 +232,13 @@ export const option = {
         },
       },
       itemStyle: {
-        emphasis: {
-          borderColor: '#fff',
+        normal: {
+          areaColor: '#00DDFF',
+          borderColor: '#3074d0',
           borderWidth: 1,
+        },
+        emphasis: {
+          areaColor: '#00DDFF',
         },
       },
     },

@@ -7,14 +7,14 @@ const { TextStyle, AxisPointer, SplitLine, AxisLine, AxisTick, AxisLabel, Title,
 const StripChartComponent = props => {
   return (
     <div className="strip-chart-box">
-      <Recharts>
+      <Recharts color={['#00DDFF', '#80FFA5', '#00DDFF', '#37A2FF', '#FF0087', '#FFBF00']}>
         <Title text="地区癌肿高风险指数" x="center">
-          <TextStyle color="#fff" fontSize={24} />
+          <TextStyle color="#fff" fontSize={20} />
         </Title>
         <Tooltip trigger="axis">
           <AxisPointer type="shadow" />
         </Tooltip>
-        <Grid left="3%" right="4%" bottom="3%" containLabel={true} />
+        <Grid top="15%" left="3%" right="4%" bottom="0%" containLabel={true} />
         <XAxis show={false} type="value" boundaryGap={[0, 0.01]}>
           <SplitLine show={false} />
           <AxisLine show={false} />
@@ -31,7 +31,7 @@ const StripChartComponent = props => {
             <TextStyle color="#fff" />
           </AxisLabel>
         </YAxis>
-        <Series name="地区癌肿高风险指数" type="bar" data={props.seriesData} itemStyle={{ normal: { color: 'rgb(73, 146, 255)' } }} />
+        <Series name="地区癌肿高风险指数" type="bar" data={props.seriesData} />
       </Recharts>
     </div>
   )

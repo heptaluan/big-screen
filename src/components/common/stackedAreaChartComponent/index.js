@@ -3,11 +3,11 @@ import './index.scss'
 import { Recharts, Components } from 'react-component-echarts'
 import * as echarts from 'echarts/lib/echarts'
 
-const { TextStyle, Label, AxisPointer, SaveAsImage, Feature, LineStyle, Title, Tooltip, Legend, Toolbox, Grid, XAxis, YAxis, Series } = Components
+const { TextStyle, Label, AxisPointer, LineStyle, Title, Tooltip, Legend, Grid, XAxis, YAxis, Series, SplitLine, AxisLine } = Components
 
-const LineChartComponent = props => {
+const StackedAreaChartComponent = props => {
   return (
-    <div className="line-chart-box">
+    <div className="stacked-area-chart-box">
       <Recharts color={props.data.color}>
         <Title text={props.data.stackedAreaChartData.title}>
           <TextStyle color="#fff" />
@@ -18,17 +18,22 @@ const LineChartComponent = props => {
             <Label backgroundColor="#6a7985" />{' '}
           </AxisPointer>
         </Tooltip>
-        <Legend data={props.data.stackedAreaChartData.legendData}>
+        <Legend top="12%" data={props.data.stackedAreaChartData.legendData}>
           <TextStyle color="#fff" />
         </Legend>
-        <Toolbox>
-          <Feature>
-            <SaveAsImage />
-          </Feature>
-        </Toolbox>
         <Grid left="3%" right="4%" bottom="3%" containLabel={true} />
-        <XAxis type="category" boundaryGap={false} data={props.data.stackedAreaChartData.xAxisData} />
-        <YAxis type="value" />
+        <XAxis type="category" boundaryGap={false} data={props.data.stackedAreaChartData.xAxisData}>
+          <SplitLine show={false} />
+          <AxisLine>
+            <LineStyle color="#fff" />
+          </AxisLine>
+        </XAxis>
+        <YAxis type="value">
+          <SplitLine show={false} />
+          <AxisLine>
+            <LineStyle color="#fff" />
+          </AxisLine>
+        </YAxis>
         {props.data.stackedAreaChartData.seriesData.map(item => (
           <Series
             key={item.id}
@@ -61,4 +66,4 @@ const LineChartComponent = props => {
   )
 }
 
-export default LineChartComponent
+export default StackedAreaChartComponent
