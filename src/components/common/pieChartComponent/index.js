@@ -21,7 +21,7 @@ const PieChartComponent = props => {
           center={['50%', '62%']}
         >
           {' '}
-          <Label normal={{ show: true, position: 'inner', textStyle: { fontWeight: 300, fontSize: 14 } }} />{' '}
+          <Label normal={{ show: true, position: 'inner', textStyle: { fontWeight: 300, fontSize: 14, color: '#000' } }} />{' '}
         </Series>
       </Recharts>
     </div>

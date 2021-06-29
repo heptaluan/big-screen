@@ -109,7 +109,7 @@ export const monthData = {
       '鼻咽癌',
       '嗜铬细胞瘤',
     ],
-    seriesData: [120, 200, 150, 90, 70, 110, 130, 120, 180, 150, 80, 70, 110, 130],
+    seriesData: [60, 100, 75, 45, 35, 55, 65, 60, 90, 75, 40, 35, 55, 65],
   },
   stackedAreaChartData: {
     title: '渠道商检测量',
@@ -178,7 +178,7 @@ export const lastMonthData = {
       '鼻咽癌',
       '嗜铬细胞瘤',
     ],
-    seriesData: [120, 190, 150, 80, 70, 120, 130, 120, 200, 150, 90, 70, 110, 130],
+    seriesData: [100, 35, 35, 40, 45, 55, 55, 60, 60, 65, 65, 75, 75, 90],
   },
   stackedAreaChartData: {
     title: '渠道商检测量',

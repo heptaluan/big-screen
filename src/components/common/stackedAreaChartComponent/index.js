@@ -3,7 +3,23 @@ import './index.scss'
 import { Recharts, Components } from 'react-component-echarts'
 import * as echarts from 'echarts/lib/echarts'
 
-const { TextStyle, Label, AxisPointer, AxisTick, LineStyle, Title, Tooltip, Legend, Grid, XAxis, YAxis, Series, SplitLine, AxisLine } = Components
+const {
+  TextStyle,
+  Label,
+  AxisPointer,
+  AxisLabel,
+  AxisTick,
+  LineStyle,
+  Title,
+  Tooltip,
+  Legend,
+  Grid,
+  XAxis,
+  YAxis,
+  Series,
+  SplitLine,
+  AxisLine,
+} = Components
 
 const StackedAreaChartComponent = props => {
   return (
@@ -31,9 +47,11 @@ const StackedAreaChartComponent = props => {
         </XAxis>
         <YAxis type="value">
           <SplitLine show={false} />
-          <AxisLine>
-            <LineStyle color="#fff" />
-          </AxisLine>
+          <AxisTick show={false} />
+          <AxisLine show={false} />
+          <AxisLabel>
+            <TextStyle color="#fff" />
+          </AxisLabel>
         </YAxis>
         {props.data.stackedAreaChartData.seriesData.map(item => (
           <Series

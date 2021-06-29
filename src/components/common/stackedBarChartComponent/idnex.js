@@ -2,7 +2,7 @@ import React from 'react'
 import './index.scss'
 import { Recharts, Components } from 'react-component-echarts'
 
-const { TextStyle, AxisPointer, LineStyle, SplitLine, AxisTick, AxisLine, Title, Tooltip, Grid, XAxis, YAxis, Series } = Components
+const { TextStyle, AxisPointer, LineStyle, AxisLabel, SplitLine, AxisTick, AxisLine, Title, Tooltip, Grid, XAxis, YAxis, Series } = Components
 
 const StackedBarChartComponent = props => {
   return (
@@ -24,9 +24,11 @@ const StackedBarChartComponent = props => {
         </XAxis>
         <YAxis type="value">
           <SplitLine show={false} />
-          <AxisLine>
-            <LineStyle color="#fff" />
-          </AxisLine>
+          <AxisTick show={false} />
+          <AxisLine show={false} />
+          <AxisLabel>
+            <TextStyle color="#fff" />
+          </AxisLabel>
         </YAxis>
         <Series name="男" barMaxWidth={40} type="bar" stack="年龄段分部" data={props.data.stackedBarChartData.manData} />
         <Series name="女" barMaxWidth={40} type="bar" stack="年龄段分部" data={props.data.stackedBarChartData.womanData} />

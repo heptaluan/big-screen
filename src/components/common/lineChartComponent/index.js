@@ -2,7 +2,23 @@ import React from 'react'
 import './index.scss'
 import { Recharts, Components } from 'react-component-echarts'
 
-const { TextStyle, Label, AxisPointer, LineStyle, SplitLine, AxisTick, AxisLine, Title, Tooltip, Legend, Grid, XAxis, YAxis, Series } = Components
+const {
+  TextStyle,
+  Label,
+  AxisPointer,
+  LineStyle,
+  AxisLabel,
+  SplitLine,
+  AxisTick,
+  AxisLine,
+  Title,
+  Tooltip,
+  Legend,
+  Grid,
+  XAxis,
+  YAxis,
+  Series,
+} = Components
 
 const LineChartComponent = props => {
   return (
@@ -22,6 +38,7 @@ const LineChartComponent = props => {
         </Legend>
         <Grid left="3%" right="4%" bottom="3%" containLabel={true} />
         <XAxis type="category" boundaryGap={false} data={props.data.lineChartData.xAxisData}>
+          <AxisLabel interval={0} rotate={40} />
           <SplitLine show={false} />
           <AxisTick show={false} />
           <AxisLine>
@@ -30,9 +47,11 @@ const LineChartComponent = props => {
         </XAxis>
         <YAxis type="value">
           <SplitLine show={false} />
-          <AxisLine>
-            <LineStyle color="#fff" />
-          </AxisLine>
+          <AxisTick show={false} />
+          <AxisLine show={false} />
+          <AxisLabel>
+            <TextStyle color="#fff" />
+          </AxisLabel>
         </YAxis>
         <Series name="每月检测量" type="line" stack="总量" data={props.data.lineChartData.monthTestNum} />
         <Series name="累计检测量" type="line" stack="总量" data={props.data.lineChartData.allTestNum}>
