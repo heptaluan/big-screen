@@ -1,5 +1,7 @@
+const themeColor = ['#00DDFF', '#80FFA5', '#37A2FF', '#FF0087', '#FFBF00']
+
 export const allData = {
-  color: ['#00DDFF', '#80FFA5', '#00DDFF', '#37A2FF', '#FF0087', '#FFBF00'],
+  color: themeColor,
   pieChartData: {
     title: '全部产品分布',
     data: [
@@ -68,7 +70,7 @@ export const allData = {
 }
 
 export const monthData = {
-  color: ['#00DDFF', '#80FFA5', '#00DDFF', '#37A2FF', '#FF0087', '#FFBF00'],
+  color: themeColor,
   pieChartData: {
     title: '当月产品分布',
     data: [
@@ -86,8 +88,8 @@ export const monthData = {
   lineChartData: {
     title: '检测量',
     xAxisData: ['一月', '二月', '三月', '四月', '五月', '六月', '七月', '八月', '九月', '十月', '十一月', '十二月'],
-    monthTestNum: [310, 332, 301, 334, 390, 320, 320, 270, 220, 230, 290, 350],
-    allTestNum: [920, 932, 901, 934, 1190, 1230, 1320, 1280, 1260, 1180, 1350, 1270],
+    monthTestNum: [320, 332, 301, 334, 390, 330, 320, 270, 220, 230, 290, 350],
+    allTestNum: [820, 932, 901, 934, 1290, 1330, 1320, 1280, 1260, 1280, 1350, 1370],
   },
   barChartData: {
     title: '癌肿风险占比',
@@ -137,7 +139,7 @@ export const monthData = {
 }
 
 export const lastMonthData = {
-  color: ['#00DDFF', '#80FFA5', '#00DDFF', '#37A2FF', '#FF0087', '#FFBF00'],
+  color: themeColor,
   pieChartData: {
     title: '上月产品分布',
     data: [
@@ -155,8 +157,8 @@ export const lastMonthData = {
   lineChartData: {
     title: '检测量',
     xAxisData: ['一月', '二月', '三月', '四月', '五月', '六月', '七月', '八月', '九月', '十月', '十一月', '十二月'],
-    monthTestNum: [820, 932, 901, 934, 1290, 1330, 1320, 1280, 1260, 1280, 1350, 1370],
-    allTestNum: [320, 332, 301, 334, 390, 330, 320, 270, 220, 230, 290, 350],
+    monthTestNum: [320, 332, 301, 334, 390, 330, 320, 270, 220, 230, 290, 350],
+    allTestNum: [820, 932, 901, 934, 1290, 1330, 1320, 1280, 1260, 1280, 1350, 1370],
   },
   barChartData: {
     title: '癌肿风险占比',

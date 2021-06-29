@@ -2,7 +2,7 @@ import React from 'react'
 import './index.scss'
 import { Recharts, Components } from 'react-component-echarts'
 
-const { TextStyle, AxisPointer, AxisLine, LineStyle, SplitLine, AxisLabel, Title, Tooltip, XAxis, YAxis, Series } = Components
+const { TextStyle, AxisPointer, AxisLine, AxisTick, LineStyle, SplitLine, AxisLabel, Title, Tooltip, XAxis, YAxis, Series } = Components
 
 const BarChartComponent = props => {
   return (
@@ -17,6 +17,7 @@ const BarChartComponent = props => {
         <XAxis type="category" data={props.data.barChartData.xAxisData}>
           <AxisLabel interval={0} rotate={40} />
           <SplitLine show={false} />
+          <AxisTick show={false} />
           <AxisLine>
             <LineStyle color="#fff" />
           </AxisLine>
@@ -31,7 +32,8 @@ const BarChartComponent = props => {
           name="癌肿风险占比"
           data={props.data.barChartData.seriesData}
           type="bar"
-          itemStyle={{ emphasis: { barBorderRadius: 10 }, normal: { barBorderRadius: 10 } }}
+          barMaxWidth={20}
+          itemStyle={{ emphasis: { barBorderRadius: 10 } }}
         />
       </Recharts>
     </div>

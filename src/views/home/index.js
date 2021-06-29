@@ -1,7 +1,6 @@
 import React, { useState } from 'react'
 import './index.scss'
 import TopHeaderComponent from '../../components/topHeaderComponent/index'
-import NavComponent from '../../components/navComponent/index'
 
 import ChartGroupComponent from '../../components/chartGroupComponent/index'
 import ModelComponent from '../../components/modelComponent/index'
@@ -48,7 +47,6 @@ const Home = () => {
         <button onClick={() => handleClick('lastMonth')}>上月</button>
       </div>
       <TopHeaderComponent />
-      <NavComponent />
       <div className="home-content">
         <ListGroupComponent data={state} />
         <ModelComponent data={state} />

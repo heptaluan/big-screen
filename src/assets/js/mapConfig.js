@@ -187,7 +187,7 @@ export const option = {
     calculable: true,
     text: ['高', '低'],
     inRange: {
-      color: ['#8888ff', '#1e20cc'],
+      color: ['red', 'yellow'],
     },
     textStyle: {
       color: '#fff',
@@ -242,6 +242,22 @@ export const option = {
         },
       },
     },
+    {
+      type: 'effectScatter',
+      coordinateSystem: 'geo',
+      data: convertData(list),
+      symbolSize: function(val) {
+          return val[2] / 30;
+      },
+      itemStyle: {
+          normal: {
+              color: 'blue',
+              shadowBlur: 10,
+              shadowColor: 'blue'
+          }
+      },
+      zlevel: 1
+  },
     {
       type: 'map',
       map: 'china',

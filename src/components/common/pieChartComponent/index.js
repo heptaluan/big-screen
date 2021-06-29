@@ -8,22 +8,20 @@ const PieChartComponent = props => {
   return (
     <div className="pie-chart-box">
       <Recharts color={props.data.color}>
-        <Title text={props.data.pieChartData.title} left="center">
+        <Title text={props.data.pieChartData.title} left="center" top="6%">
           <TextStyle color="#fff" />
         </Title>
         <Tooltip trigger="item" />
         <Series
           name="产品分布"
           type="pie"
-          radius={['40%', '70%']}
-          avoidLabelOverlap={false}
-          itemStyle={{ borderRadius: 10, borderColor: '#fff', borderWidth: 2 }}
-          emphasis={{ label: { show: true, fontSize: '16', fontWeight: 'bold' } }}
-          labelLine={{ show: false }}
+          radius="70%"
           data={props.data.pieChartData.data}
+          emphasis={{ itemStyle: { shadowBlur: 10, shadowOffsetX: 0, shadowColor: 'rgba(0, 0, 0, 0.5)' } }}
+          center={['50%', '62%']}
         >
           {' '}
-          <Label show={false} position="center" />{' '}
+          <Label normal={{ show: true, position: 'inner', textStyle: { fontWeight: 300, fontSize: 14 } }} />{' '}
         </Series>
       </Recharts>
     </div>

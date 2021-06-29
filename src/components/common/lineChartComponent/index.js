@@ -2,7 +2,7 @@ import React from 'react'
 import './index.scss'
 import { Recharts, Components } from 'react-component-echarts'
 
-const { TextStyle, Label, AxisPointer, LineStyle, SplitLine, AxisLine, Title, Tooltip, Legend, Grid, XAxis, YAxis, Series } = Components
+const { TextStyle, Label, AxisPointer, LineStyle, SplitLine, AxisTick, AxisLine, Title, Tooltip, Legend, Grid, XAxis, YAxis, Series } = Components
 
 const LineChartComponent = props => {
   return (
@@ -23,6 +23,7 @@ const LineChartComponent = props => {
         <Grid left="3%" right="4%" bottom="3%" containLabel={true} />
         <XAxis type="category" boundaryGap={false} data={props.data.lineChartData.xAxisData}>
           <SplitLine show={false} />
+          <AxisTick show={false} />
           <AxisLine>
             <LineStyle color="#fff" />
           </AxisLine>
